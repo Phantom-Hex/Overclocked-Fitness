@@ -45,7 +45,7 @@ function test_input($data) {
 <div class="section1">
     <p>For all business inquiries and questions, please contact Tony directly by clicking <a href="mailto: TatsumakiFitness@mail.com">here</a> or leave a comment below.
     </p>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> MAILTO:tonytornado@outlook.com" enctype="text/plain">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="text/plain">
     <p>For all other questions, please fill out this form.
     <br>
     (* Denotes a required field)</p>
