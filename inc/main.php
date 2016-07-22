@@ -29,10 +29,11 @@
     <h2>Sign up for our newsletter!</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="text/plain"
     <p>Like what we have to say? Enjoy inane ramblings from a madman? Want your computer fixed while you sweat? Sign up now!</p>
-    <label>Name: <br></label><input type="text"></input><br />
-    <label>E-mail: <br></label><input type="email"></input><br />
+    <label for="name">Name: <br></label><input type="text" name="name"></input><br />
+    <label for="email">E-mail: <br></label><input type="email" name="email"></input><br />
     <label>How did you hear about us?</label><br><textarea>Say it with your words... from your hands!</textarea>
     <br />
-    <button type="submit">Prepare for awesome spam!</button>
+    <input type="submit" value="Prepare for awesome spam!">
+    </form>
   </section>
   <!-- first page content ends -->
