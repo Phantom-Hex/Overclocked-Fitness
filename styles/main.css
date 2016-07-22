@@ -1,0 +1,158 @@
+@charset "utf-8";
+@import 'https://fonts.googleapis.com/css?family=Russo+One';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+/* CSS Document */
+
+/* Main Elements */
+body {
+	background: black;
+	color: white;
+	font-family: "Ubuntu", Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	margin-top: 20px;
+}
+
+h2 {
+	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-size: 28px;
+}
+
+h3 {
+	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-shadow:#0041A7 #0024FF;
+}
+
+/* Header Elements */
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#header li {
+	float:left;
+	text-transform:uppercase;
+}
+
+#header li a {
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+}
+
+#header li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.initials {
+	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+/* DIV elements */
+
+.Space1 h2 {
+	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-size: 28px;
+	text-transform: uppercase;
+	background-color:#000000;
+	text-align: center;
+}
+
+.Section1, .Section2, .Section3 {
+	background-color: black;
+	background-size: cover;
+	padding: 10px 0 10px 0;
+	text-align: center;	
+	text-justify: distribute;
+}
+
+.Space1, .Space2 {
+	padding: 40px 0 40px 0;
+	background: url('../img/Fitness2.jpg') no-repeat center center fixed;
+	background-size: cover;
+	max-width: 100%;
+}
+
+#signup {
+	align-items:center;
+	flex-wrap: wrap;
+}
+
+/* Footer Elements */
+
+.sempra {
+	text-align: inherit;
+	text-outline:#F90004;
+}
+
+div p {
+	padding-right: 12%;
+	padding-left: 12%;
+}
+
+/* Form Elements */
+
+input[type=text], input[type=email] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border: 3px solid #ccc;
+	border-radius: 4px;
+	resize:none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+/* mobile devices first! */
+
+@media (max-width: 480px){
+	body {
+		text: gray;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		text-align:center;
+		margin-top: 150px;
+	}
+	
+	#Main {
+		text-wrap:normal;
+	}
+	
+	#header li, 
+    #header.initials {
+		float: none;
+		width: 100%}
+}
+
+/* hit the tablets next */
+
+@media (max-width:720px){
+
+	
+}
+
+/* and the rest is history! */
