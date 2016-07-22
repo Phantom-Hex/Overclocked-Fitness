@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css" href="inc/styles/main.css" />
+<link rel="stylesheet" type="text/css" href="styles/main.css" />
 <?php
-require("inc/inc/heading.php");
+require("inc/heading.php");
 
 // define variables and set to empty values
 $firstnameErr = $lastnameErr = $ageErr = $heightErr = $weightErr = $emailErr = $genderErr = $chestErr = $waistErr = $hipErr = $neckErr = $forearmErr = $tricepErr = $bicepErr = $thighErr = $calvesErr ="";
@@ -150,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 You want to get started on your path to glory? Well, first we got to know a little about yourself!  Fill out this tiny questionaire and someone will contact you about your needs and what-have-you so we can get your rig jumpstarted, see what parts you need, and assess what we're working with.  Don't worry, you don't need to sign anything in blood, it's just a general idea of who you are.  The formalities can be saved for later.
 <br><br>
 (*Denotes a required field)</P>
-    <form class="Client Data" name="Client" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); database.php?>">
+    <form class="Client Data" name="Client" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); "inc/database.php"?>">
     <p><h3>Client Questionnaire</h3>
         <label for="client">First Name: <br><input type="text" name="First Name" value="<?php echo $firstname;?>">
   <span class="error">* <?php echo $firstnameErr;?></span></label>
@@ -204,3 +204,4 @@ You want to get started on your path to glory? Well, first we got to know a litt
     <input style"text-align: center" type="submit" name="Submit">
     </form>
 </div>
+<?php require("inc/footing.php") ?>
