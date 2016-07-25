@@ -1,3 +1,48 @@
+<?php
+
+require_once("class-contact.php");
+$contact = new Contact();
+
+if(isset($_POST['Register']))
+{
+	$name = strip_tags($_POST['name']);
+	$email = strip_tags($_POST['email']);
+	
+	try
+      {
+         $command = $contact->prepare("SELECT name,email 
+		 									FROM newsletter 
+											WHERE name=:name 
+											OR email=:email");
+         $command->execute(array(':name'=>$name, ':email'=>$email));
+         $row=$command->fetch(PDO::FETCH_ASSOC);
+    
+         if($row['user_name']==$name) {
+            $error[] = "There's probably a lot of you out there, but you know what? We don't mind another one of you.";
+         }
+         else if($row['user_email']==$email) {
+            $error[] = "Hey, you musta been here before.";
+		 }
+         else {
+			 if($contact->newsRegister($name,$email)){
+                $contact->redirect('index.php?joined');
+            }
+         }
+	  }
+     catch(PDOException $e)
+     {
+        echo $e->getMessage();
+     }
+}
+?>
+<?php
+if(isset($_GET['joined']))
+		{
+			 ?>
+               <h2>You're signed up!  Prepare for all the spam!</h2>
+             <?php
+		}
+?>
 <!-- first page content starts -->
 <section id="Main">
   <div class="Section1">
@@ -27,13 +72,12 @@
   <hr />
   <section id="signup">
     <h2>Sign up for our newsletter!</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="text/plain"
-    <p>Like what we have to say? Enjoy inane ramblings from a madman? Want your computer fixed while you sweat? Sign up now!</p>
-    <label for="name">Name: <br></label><input type="text" name="name"></input><br />
-    <label for="email">E-mail: <br></label><input type="email" name="email"></input><br />
-    <label>How did you hear about us?</label><br><textarea>Say it with your words... from your hands!</textarea>
-    <br />
-    <input type="submit" value="Prepare for awesome spam!">
-    </form>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <p>Like what we have to say? Enjoy inane ramblings from a madman? Want your computer fixed while you sweat? Sign up now!</p>
+            <input type="text" name="name" placeholder="Name" /><br /><br />
+            <input type="email" name="email" placeholder="E-Mail Address" /><br />
+            <br />
+            <button type="submit" value="Register">Newsletter Go!</button>
+	        </form>
   </section>
   <!-- first page content ends -->

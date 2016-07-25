@@ -55,7 +55,7 @@ function test_input($data) {
     <p><label for="newsletter">E-Mail: <br></label><input type="Email" id="Email" placeholder="someone@somemailbox.com" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span></p>
     <p><textarea name="comment" rows="3" cols="40"><?php echo $comment;?>Tell me how you really feel. </textarea></p>
-    <p><input type="button" name="submit" value="Send!"> 
+    <p><button type="button" name="submit" value="Client">Send!</button> 
     </form>
 </div>
 <?php require("inc/footing.php");?>
