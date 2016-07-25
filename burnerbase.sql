@@ -44,6 +44,12 @@ CREATE TABLE IF NOT EXISTS `burnerbase`.`clients`(
   `inquiry_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY(`user_id`),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  UNIQUE(`firstname`),
+  UNIQUE(`lastname`),
+  UNIQUE(`email`)
+>>>>>>> origin/master
 =======
   UNIQUE(`firstname`),
   UNIQUE(`lastname`),
@@ -58,6 +64,10 @@ CREATE TABLE IF NOT EXISTS `burnerbase`.`newsletter`(
   `name` VARCHAR(25) NOT NULL,
   `email` VARCHAR(36) NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  `joining_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+>>>>>>> origin/master
 =======
   `joining_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 >>>>>>> origin/master

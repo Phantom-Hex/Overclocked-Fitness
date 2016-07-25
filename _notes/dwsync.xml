@@ -5,8 +5,13 @@
 <file name="about.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131136708735602003" remote="131136708730000000" Dst="2" />
 <file name="contact.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131138971810000000" remote="131138971810000000" Dst="2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 <file name="FirstClient.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131139107935428392" remote="131139107930000000" Dst="2" />
 <file name="burnerbase.sql" server="C:/wamp64/www/Overclocked-Fitness/" local="131139099600000000" remote="131139099600000000" Dst="2" />
+=======
+<file name="FirstClient.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131139085933612225" remote="131139085930000000" Dst="2" />
+<file name="burnerbase.sql" server="C:/wamp64/www/Overclocked-Fitness/" local="131139023080000000" remote="131139023080000000" Dst="2" />
+>>>>>>> origin/master
 =======
 <file name="FirstClient.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131139085933612225" remote="131139085930000000" Dst="2" />
 <file name="burnerbase.sql" server="C:/wamp64/www/Overclocked-Fitness/" local="131139023080000000" remote="131139023080000000" Dst="2" />

@@ -13,7 +13,11 @@ class Contact
 		$this->conn = $db;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 =======
 	
 >>>>>>> origin/master
@@ -23,9 +27,15 @@ class Contact
 		return $command;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /* Client coding */
 
+=======
+	
+/* Client coding */
+	
+>>>>>>> origin/master
 =======
 	
 /* Client coding */
@@ -36,9 +46,15 @@ class Contact
 	try {
 		$command = $this->conn->prepare(
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves)
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
 
+=======
+		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
+		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
+		
+>>>>>>> origin/master
 =======
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
@@ -67,6 +83,7 @@ class Contact
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   /*newsletter code */
 
@@ -80,6 +97,8 @@ class Contact
 		$command->bindparam(":email", $email);
 
 =======
+=======
+>>>>>>> origin/master
   
   /*newsletter code */
   
@@ -92,6 +111,9 @@ class Contact
 		$command->bindparam(":name", $name);
 		$command->bindparam(":email", $email);
 		
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 		$command->execute();
 		return $command;
@@ -102,7 +124,11 @@ class Contact
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> origin/master
 =======
      
 >>>>>>> origin/master
@@ -111,7 +137,11 @@ class Contact
 	}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> origin/master
 =======
 ?>
 >>>>>>> origin/master

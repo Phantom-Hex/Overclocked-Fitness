@@ -1,7 +1,11 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require_once("class-contact.php");
+=======
+require_once("inc/class-contact.php");
+>>>>>>> origin/master
 =======
 require_once("inc/class-contact.php");
 >>>>>>> origin/master
@@ -12,6 +16,7 @@ if(isset($_POST['Register']))
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	try
       {
@@ -20,6 +25,8 @@ if(isset($_POST['Register']))
          $row=$command->fetch(PDO::FETCH_ASSOC);
 
 =======
+=======
+>>>>>>> origin/master
 	
 	try
       {
@@ -30,13 +37,20 @@ if(isset($_POST['Register']))
          $command->execute(array(':name'=>$name, ':email'=>$email));
          $row=$command->fetch(PDO::FETCH_ASSOC);
     
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
          if($row['user_name']==$name) {
             $error[] = "There's probably a lot of you out there, but you know what? We don't mind another one of you.";
          }
          else if($row['user_email']==$email) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $error[] = "Hey, you must've been here before.";
+=======
+            $error[] = "Hey, you musta been here before.";
+>>>>>>> origin/master
 =======
             $error[] = "Hey, you musta been here before.";
 >>>>>>> origin/master
@@ -93,15 +107,21 @@ if(isset($_GET['joined']))
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <p>Like what we have to say?  Enjoy inane ramblings from a madman?  Want your computer fixed while you sweat?  Sign up now!</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <input type="text" name="name" placeholder="Name" value="<?php if(isset($error)){echo $name;}?>"/><br /><br />
             <input type="email" name="email" placeholder="E-Mail Address" value="<?php if(isset($error)){echo $email;}?>" /><br />
             <br />
             <button type="submit" name="Register">Newsletter Go!</button>
 =======
+=======
+>>>>>>> origin/master
             <input type="text" name="name" placeholder="Name" /><br /><br />
             <input type="email" name="email" placeholder="E-Mail Address" /><br />
             <br />
             <button type="submit" value="Register">Newsletter Go!</button>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 	        </form>
   </section>
