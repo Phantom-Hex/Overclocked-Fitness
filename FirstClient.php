@@ -216,8 +216,13 @@ You want to get started on your path to glory? Well, first we got to know a litt
     </p>
     <p><h3>Basic Information</h3>
     <Label for="Client">Gender:<br>
+<<<<<<< HEAD
   <input type="radio" name="gender male" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <input type="radio" name="gender female" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+=======
+  <input type="radio" name="gender" placeholder="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+  <input type="radio" name="gender" placeholder="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+>>>>>>> origin/master
   <span class="error">*<?php echo $genderErr;?></span><br />
   <br>
   <input type="text" name="age" placeholder="Age*" value="<?php echo $age;?>">

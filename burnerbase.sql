@@ -43,6 +43,12 @@ CREATE TABLE IF NOT EXISTS `burnerbase`.`clients`(
   `calves` INT(2) NOT NULL,
   `inquiry_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY(`user_id`),
+<<<<<<< HEAD
+=======
+  UNIQUE(`firstname`),
+  UNIQUE(`lastname`),
+  UNIQUE(`email`)
+>>>>>>> origin/master
 ) ENGINE = MyISAM CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 --
@@ -51,6 +57,10 @@ CREATE TABLE IF NOT EXISTS `burnerbase`.`newsletter`(
   `user_id` INT(255) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(25) NOT NULL,
   `email` VARCHAR(36) NOT NULL,
+<<<<<<< HEAD
+=======
+  `joining_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+>>>>>>> origin/master
   PRIMARY KEY(`user_id`),
   UNIQUE(`name`),
   UNIQUE(`email`)

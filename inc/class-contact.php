@@ -12,22 +12,38 @@ class Contact
 		$db = $database->db();
 		$this->conn = $db;
     }
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 	public function runQuery($sql)
 	{
 		$command = $this->conn->prepare($sql);
 		return $command;
 	}
+<<<<<<< HEAD
 
 /* Client coding */
 
+=======
+	
+/* Client coding */
+	
+>>>>>>> origin/master
 	public function clientRegister($firstname,$lastname,$age,$height,$weight,$email,$gender,$chest,$waist,$hip,$neck,$forearm,$tricep,$bicep,$thigh,$calves)
 	{
 	try {
 		$command = $this->conn->prepare(
+<<<<<<< HEAD
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves)
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
 
+=======
+		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
+		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
+		
+>>>>>>> origin/master
 		$command->bindparam(":firstname", $firstname);
 		$command->bindparam(":lastname", $lastname);
 		$command->bindparam(":age", $age);
@@ -50,6 +66,7 @@ class Contact
 		echo $e->getMessage();
 		}
 	}
+<<<<<<< HEAD
 
   /*newsletter code */
 
@@ -62,6 +79,20 @@ class Contact
 		$command->bindparam(":name", $name);
 		$command->bindparam(":email", $email);
 
+=======
+  
+  /*newsletter code */
+  
+  public function newsRegister($name,$email) {
+	try {
+		$command = $this->conn->prepare(
+		"INSERT INTO newsletter ('name', 'email')
+		 VALUES (:name, :email)");
+		
+		$command->bindparam(":name", $name);
+		$command->bindparam(":email", $email);
+		
+>>>>>>> origin/master
 		$command->execute();
 		return $command;
 		} catch(PDOException $e) {
@@ -70,9 +101,17 @@ class Contact
 		echo $e->getMessage();
 		}
 	}
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> origin/master
    public function redirect($url){
        header("Location: $url");
 	}
 }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> origin/master

@@ -1,12 +1,17 @@
 <?php
 
+<<<<<<< HEAD
 require_once("class-contact.php");
+=======
+require_once("inc/class-contact.php");
+>>>>>>> origin/master
 $contact = new Contact();
 
 if(isset($_POST['Register']))
 {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
+<<<<<<< HEAD
 
 	try
       {
@@ -14,11 +19,27 @@ if(isset($_POST['Register']))
          $command->execute(array(':name'=>$name, ':email'=>$email));
          $row=$command->fetch(PDO::FETCH_ASSOC);
 
+=======
+	
+	try
+      {
+         $command = $contact->prepare("SELECT name,email 
+		 									FROM newsletter 
+											WHERE name=:name 
+											OR email=:email");
+         $command->execute(array(':name'=>$name, ':email'=>$email));
+         $row=$command->fetch(PDO::FETCH_ASSOC);
+    
+>>>>>>> origin/master
          if($row['user_name']==$name) {
             $error[] = "There's probably a lot of you out there, but you know what? We don't mind another one of you.";
          }
          else if($row['user_email']==$email) {
+<<<<<<< HEAD
             $error[] = "Hey, you must've been here before.";
+=======
+            $error[] = "Hey, you musta been here before.";
+>>>>>>> origin/master
 		 }
          else {
 			 if($contact->newsRegister($name,$email)){
@@ -71,10 +92,17 @@ if(isset($_GET['joined']))
     <h2>Sign up for our newsletter!</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <p>Like what we have to say?  Enjoy inane ramblings from a madman?  Want your computer fixed while you sweat?  Sign up now!</p>
+<<<<<<< HEAD
             <input type="text" name="name" placeholder="Name" value="<?php if(isset($error)){echo $name;}?>"/><br /><br />
             <input type="email" name="email" placeholder="E-Mail Address" value="<?php if(isset($error)){echo $email;}?>" /><br />
             <br />
             <button type="submit" name="Register">Newsletter Go!</button>
+=======
+            <input type="text" name="name" placeholder="Name" /><br /><br />
+            <input type="email" name="email" placeholder="E-Mail Address" /><br />
+            <br />
+            <button type="submit" value="Register">Newsletter Go!</button>
+>>>>>>> origin/master
 	        </form>
   </section>
   <!-- first page content ends -->
