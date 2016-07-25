@@ -1,12 +1,12 @@
 <?php
 
-require_once("class-contact.php");
+require_once("inc/class-contact.php");
 $contact = new Contact();
 
 if(isset($_POST['Register']))
 {
-	$name = strip_tags($_POST['name']);
-	$email = strip_tags($_POST['email']);
+	$name = $_POST['name'];
+	$email = $_POST['email'];
 	
 	try
       {
@@ -39,7 +39,7 @@ if(isset($_POST['Register']))
 if(isset($_GET['joined']))
 		{
 			 ?>
-               <h2>You're signed up!  Prepare for all the spam!</h2>
+               <h2 style="text-align:center">You're signed up!  Prepare for all the spam!</h2>
              <?php
 		}
 ?>
@@ -73,7 +73,7 @@ if(isset($_GET['joined']))
   <section id="signup">
     <h2>Sign up for our newsletter!</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            <p>Like what we have to say? Enjoy inane ramblings from a madman? Want your computer fixed while you sweat? Sign up now!</p>
+            <p>Like what we have to say?  Enjoy inane ramblings from a madman?  Want your computer fixed while you sweat?  Sign up now!</p>
             <input type="text" name="name" placeholder="Name" /><br /><br />
             <input type="email" name="email" placeholder="E-Mail Address" /><br />
             <br />

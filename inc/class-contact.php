@@ -25,7 +25,7 @@ class Contact
 	{
 	try {
 		$command = $this->conn->prepare(
-		"INSERT INTO clients (first_name, last_name, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
+		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
 		
 		$command->bindparam(":firstname", $firstname);
@@ -53,7 +53,7 @@ class Contact
   
   /*newsletter code */
   
-  public function newsRegister() {
+  public function newsRegister($name,$email) {
 	try {
 		$command = $this->conn->prepare(
 		"INSERT INTO newsletter ('name', 'email')
@@ -66,6 +66,8 @@ class Contact
 		return $command;
 		} catch(PDOException $e) {
     	echo "NOPE. NOT TODAY!";
+		echo '<br />';
+		echo $e->getMessage();
 		}
 	}
      

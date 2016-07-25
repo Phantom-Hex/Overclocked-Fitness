@@ -48,6 +48,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
   
+  if (empty($_POST["height"])) {
+    $heightErr = "height is required";
+  } else {
+    $height = test_input($_POST["height"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[0-9]*$/",$height)) {
+      $heightErr = "Only numbers allowed"; 
+    }
+  }
+  
+  if (empty($_POST["weight"])) {
+    $weightErr = "weight is required";
+  } else {
+    $weight = test_input($_POST["weight"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[0-9]*$/",$weight)) {
+      $weightErr = "Only numbers allowed"; 
+    }
+  }
+  
   if (empty($_POST["chest"])) {
     $chestErr = "Chest length is required";
   } else {
@@ -172,12 +192,11 @@ if(isset($_POST['Client']))
 if(isset($_GET['joined']))
 		{
 			 ?>
-               <h2>We've got you in the system!</h2>
+               <h2 style="text-align:center">We've got you in the system!</h2>
              <?php
 		}
 ?>
 
-?>
 <div class="Inputs" style="text-align:center">
 <p>
 You want to get started on your path to glory? Well, first we got to know a little about yourself!  Fill out this tiny questionaire and someone will contact you about your needs and what-have-you so we can get your rig jumpstarted, see what parts you need, and assess what we're working with.  Don't worry, you don't need to sign anything in blood, it's just a general idea of who you are.  The formalities can be saved for later.
@@ -199,7 +218,7 @@ You want to get started on your path to glory? Well, first we got to know a litt
     <Label for="Client">Gender:<br>
   <input type="radio" name="gender" placeholder="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
   <input type="radio" name="gender" placeholder="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <span class="error">* <?php echo $genderErr;?></span><br />
+  <span class="error">*<?php echo $genderErr;?></span><br />
   <br>
   <input type="text" name="age" placeholder="Age*" value="<?php echo $age;?>">
   <span class="error"><?php echo $ageErr;?></span><br />
