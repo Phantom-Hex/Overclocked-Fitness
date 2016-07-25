@@ -13,7 +13,6 @@
         <ul>
             <li class="nav"><a href="FirstClient.php">Start-Up</a></li>
             <li class="nav"><a href="about.php">About</a></li>
-            <li class="nav"><a href="contact.php">Contact</a></li>
             <li style="float:right; background-color:#201ED1"><a href="index.php"><h2 class="initials">OVERCLOCKED FITNESS</h2></a></li>
         </ul>
     </div>
