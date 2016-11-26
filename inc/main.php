@@ -104,6 +104,7 @@ if(isset($_GET['joined']))
   <hr />
   <section id="signup">
     <h2>Sign up for our newsletter!</h2>
+<<<<<<< HEAD
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <p>Like what we have to say?  Enjoy inane ramblings from a madman?  Want your computer fixed while you sweat?  Sign up now!</p>
 <<<<<<< HEAD
@@ -124,5 +125,14 @@ if(isset($_GET['joined']))
 =======
 >>>>>>> origin/master
 	        </form>
+=======
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="text/plain"
+    <p>Like what we have to say? Enjoy inane ramblings from a madman? Want your computer fixed while you sweat? Sign up now!</p>
+    <label>Name: <br></label><input type="text"></input><br />
+    <label>E-mail: <br></label><input type="email"></input><br />
+    <label>How did you hear about us?</label><br><textarea>Say it with your words... from your hands!</textarea>
+    <br />
+    <button type="submit">Prepare for awesome spam!</button>
+>>>>>>> parent of 3adff51... Fifth Commit
   </section>
   <!-- first page content ends -->

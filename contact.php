@@ -1,6 +1,5 @@
 <link rel="stylesheet" type="text/css" href="styles/main.css" />
 <?php
-require("inc/database.php");
 require("inc/heading.php");
 
 // define variables and set to empty values
@@ -50,9 +49,9 @@ function test_input($data) {
     <p>For all other questions, please fill out this form.
     <br>
     (* Denotes a required field)</p>
-    <p><label for="newsletter">Name: <br></label><input type="text" id="name" placeholder="Somebody Inquisitive" value="<?php echo $name;?>">
+    <p><label for="newsletter">Name: <br></label><input type="text" id="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span></p>
-    <p><label for="newsletter">E-Mail: <br></label><input type="Email" id="Email" placeholder="someone@somemailbox.com" value="<?php echo $email;?>">
+    <p><label for="newsletter">E-Mail: <br></label><input type="Email" id="Email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span></p>
     <p><textarea name="comment" rows="3" cols="40"><?php echo $comment;?>Tell me how you really feel. </textarea></p>
     <p><button type="button" name="submit" value="Client">Send!</button> 

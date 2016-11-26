@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
+<<<<<<< HEAD
 <file name="database.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131138982959379395" remote="131138982950000000" Dst="2" />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <file name="heading.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131139098290000000" remote="131139098290000000" Dst="2" />
 <file name="footing.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131138944301547919" remote="131138944300000000" Dst="2" />
 <file name="main.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131139097510000000" remote="131139097510000000" Dst="2" />
+=======
+<file name="database.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131136761740400832" remote="131136761740000000" Dst="2" />
+<file name="heading.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131136778610102857" remote="131136778610000000" Dst="2" />
+<file name="footing.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131136783469183423" remote="131136783460000000" Dst="2" />
+<file name="main.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131136769510574625" remote="131136769510000000" Dst="2" />
+<file name="repair.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131128372550000000" remote="131128372550000000" Dst="2" />
+>>>>>>> parent of 3adff51... Fifth Commit
 <file name="about.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131130115810000000" remote="131130115810000000" Dst="2" />
 <file name="class-contact.php" server="C:/wamp64/www/Overclocked-Fitness/" local="131139097060000000" remote="131139097060000000" Dst="2" />
 =======
