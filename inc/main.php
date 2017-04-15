@@ -1,22 +1,13 @@
-<?php
+<? php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 require_once("class-contact.php");
-=======
-require_once("inc/class-contact.php");
->>>>>>> origin/master
-=======
-require_once("inc/class-contact.php");
->>>>>>> origin/master
+
 $contact = new Contact();
 
 if(isset($_POST['Register']))
 {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 	try
       {
@@ -24,41 +15,25 @@ if(isset($_POST['Register']))
          $command->execute(array(':name'=>$name, ':email'=>$email));
          $row=$command->fetch(PDO::FETCH_ASSOC);
 
-=======
-=======
->>>>>>> origin/master
-	
 	try
       {
-         $command = $contact->prepare("SELECT name,email 
-		 									FROM newsletter 
-											WHERE name=:name 
+         $command = $contact->prepare("SELECT name,email
+		 									FROM newsletter
+											WHERE name=:name
 											OR email=:email");
          $command->execute(array(':name'=>$name, ':email'=>$email));
          $row=$command->fetch(PDO::FETCH_ASSOC);
-    
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+
          if($row['user_name']==$name) {
             $error[] = "There's probably a lot of you out there, but you know what? We don't mind another one of you.";
          }
          else if($row['user_email']==$email) {
-<<<<<<< HEAD
-<<<<<<< HEAD
             $error[] = "Hey, you must've been here before.";
-=======
-            $error[] = "Hey, you musta been here before.";
->>>>>>> origin/master
-=======
-            $error[] = "Hey, you musta been here before.";
->>>>>>> origin/master
-		 }
+		 		 }
          else {
-			 if($contact->newsRegister($name,$email)){
+			 	 		 if($contact->newsRegister($name,$email)){
                 $contact->redirect('index.php?joined');
-            }
+            	}
          }
 	  }
      catch(PDOException $e)
@@ -67,7 +42,7 @@ if(isset($_POST['Register']))
      }
 }
 ?>
-<?php
+<? php
 if(isset($_GET['joined']))
 		{
 			 ?>
@@ -104,35 +79,12 @@ if(isset($_GET['joined']))
   <hr />
   <section id="signup">
     <h2>Sign up for our newsletter!</h2>
-<<<<<<< HEAD
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <p>Like what we have to say?  Enjoy inane ramblings from a madman?  Want your computer fixed while you sweat?  Sign up now!</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <input type="text" name="name" placeholder="Name" value="<?php if(isset($error)){echo $name;}?>"/><br /><br />
             <input type="email" name="email" placeholder="E-Mail Address" value="<?php if(isset($error)){echo $email;}?>" /><br />
             <br />
             <button type="submit" name="Register">Newsletter Go!</button>
-=======
-=======
->>>>>>> origin/master
-            <input type="text" name="name" placeholder="Name" /><br /><br />
-            <input type="email" name="email" placeholder="E-Mail Address" /><br />
-            <br />
-            <button type="submit" value="Register">Newsletter Go!</button>
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 	        </form>
-=======
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="text/plain"
-    <p>Like what we have to say? Enjoy inane ramblings from a madman? Want your computer fixed while you sweat? Sign up now!</p>
-    <label>Name: <br></label><input type="text"></input><br />
-    <label>E-mail: <br></label><input type="email"></input><br />
-    <label>How did you hear about us?</label><br><textarea>Say it with your words... from your hands!</textarea>
-    <br />
-    <button type="submit">Prepare for awesome spam!</button>
->>>>>>> parent of 3adff51... Fifth Commit
-  </section>
+					<section>
   <!-- first page content ends -->

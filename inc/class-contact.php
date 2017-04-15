@@ -12,54 +12,20 @@ class Contact
 		$db = $database->db();
 		$this->conn = $db;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> origin/master
-=======
-	
->>>>>>> origin/master
 	public function runQuery($sql)
 	{
 		$command = $this->conn->prepare($sql);
 		return $command;
-	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-/* Client coding */
-
-=======
-	
-/* Client coding */
-	
->>>>>>> origin/master
-=======
-	
-/* Client coding */
-	
->>>>>>> origin/master
-	public function clientRegister($firstname,$lastname,$age,$height,$weight,$email,$gender,$chest,$waist,$hip,$neck,$forearm,$tricep,$bicep,$thigh,$calves)
+	}	public function clientRegister($firstname,$lastname,$age,$height,$weight,$email,$gender,$chest,$waist,$hip,$neck,$forearm,$tricep,$bicep,$thigh,$calves)
 	{
 	try {
 		$command = $this->conn->prepare(
-<<<<<<< HEAD
-<<<<<<< HEAD
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves)
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
-
-=======
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
-		
->>>>>>> origin/master
-=======
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
-		
->>>>>>> origin/master
 		$command->bindparam(":firstname", $firstname);
 		$command->bindparam(":lastname", $lastname);
 		$command->bindparam(":age", $age);
@@ -82,8 +48,6 @@ class Contact
 		echo $e->getMessage();
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   /*newsletter code */
 
@@ -95,10 +59,6 @@ class Contact
 
 		$command->bindparam(":name", $name);
 		$command->bindparam(":email", $email);
-
-=======
-=======
->>>>>>> origin/master
   
   /*newsletter code */
   
@@ -110,11 +70,6 @@ class Contact
 		
 		$command->bindparam(":name", $name);
 		$command->bindparam(":email", $email);
-		
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 		$command->execute();
 		return $command;
 		} catch(PDOException $e) {
@@ -123,25 +78,7 @@ class Contact
 		echo $e->getMessage();
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-     
->>>>>>> origin/master
-=======
-     
->>>>>>> origin/master
    public function redirect($url){
        header("Location: $url");
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-?>
-=======
-?>
->>>>>>> origin/master
-=======
-?>
->>>>>>> origin/master

@@ -1,19 +1,18 @@
-<?php
+<? php
 
-<<<<<<< HEAD
 /* Database connecting! */
 class Database
-{   
+{
     private $host = "localhost";
     private $db_name = "burnerbase";
     private $username = "root";
     private $password = "";
     public $conn;
-     
+
     public function db()
 	{
-     
-	    $this->conn = null;    
+
+	    $this->conn = null;
         try
 		{
             $this->conn = new PDO("mysql:host=".$this->host .";dbname=". $this->db_name, $this->username, $this->password);
@@ -23,12 +22,11 @@ class Database
 		{
             echo "ERROR DETECTED: " . $exception->getMessage();
         }
-         
+
         return $this->conn;
     }
 }
-?>
-=======
+
 try {
   $db = new PDO("mysql:host=localhost;dbname=clients;port=3306","root","Cyclone");
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -50,4 +48,3 @@ echo "<pre>";
 var_dump($results->fetchAll(PDO::FETCH_ASSOC));
 
 ?>
->>>>>>> parent of 3adff51... Fifth Commit

@@ -7,6 +7,6 @@
     	<a href="http://twitter.com/OverclockedFitness" alt="Twitter"><img src="social/twitter.png"></a>
     	<a href="http://www.tumblr.com/OverclockedFitness" alt="Tumblr... yes, we do that too."><img src="social/tumblr.png"></a>
   </p>
-  </div>     
+  </div>
 </body>
 </html>
