@@ -12,20 +12,22 @@ class Contact
 		$db = $database->db();
 		$this->conn = $db;
     }
+
 	public function runQuery($sql)
 	{
 		$command = $this->conn->prepare($sql);
 		return $command;
-	}	public function clientRegister($firstname,$lastname,$age,$height,$weight,$email,$gender,$chest,$waist,$hip,$neck,$forearm,$tricep,$bicep,$thigh,$calves)
+	}
+
+/* Client coding */
+
+	public function clientRegister($firstname,$lastname,$age,$height,$weight,$email,$gender,$chest,$waist,$hip,$neck,$forearm,$tricep,$bicep,$thigh,$calves)
 	{
 	try {
 		$command = $this->conn->prepare(
 		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves)
 		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
-		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
-		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
-		"INSERT INTO clients (firstname, lastname, age, height, weight, email, gender, chest, waist, hip, neck, forearm, tricep, bicep, thigh, calves) 
-		VALUES (:firstname, :lastname, :age, :height, :weight, :email, :gender, :chest, :waist, :hip, :neck, :forearm, :tricep, :bicep, :thigh, :calves)");
+
 		$command->bindparam(":firstname", $firstname);
 		$command->bindparam(":lastname", $lastname);
 		$command->bindparam(":age", $age);
@@ -59,17 +61,7 @@ class Contact
 
 		$command->bindparam(":name", $name);
 		$command->bindparam(":email", $email);
-  
-  /*newsletter code */
-  
-  public function newsRegister($name,$email) {
-	try {
-		$command = $this->conn->prepare(
-		"INSERT INTO newsletter ('name', 'email')
-		 VALUES (:name, :email)");
-		
-		$command->bindparam(":name", $name);
-		$command->bindparam(":email", $email);
+
 		$command->execute();
 		return $command;
 		} catch(PDOException $e) {
@@ -78,7 +70,9 @@ class Contact
 		echo $e->getMessage();
 		}
 	}
+
    public function redirect($url){
        header("Location: $url");
 	}
 }
+?>

@@ -87,7 +87,7 @@ h3 {
 }
 
 #signup {
-	align-items:center;
+	text-align:center;
 	flex-wrap: wrap;
 }
 
@@ -119,7 +119,6 @@ input[type=text]:focus {
     border: 3px solid #555;
 }
 
-<<<<<<< HEAD
 button{
     background-color: #2C19D0;
     border: none;
@@ -132,10 +131,8 @@ button{
 	font-family: "Ubuntu", Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 }
 
-=======
->>>>>>> parent of 3adff51... Fifth Commit
 textarea {
-    width: 100%;
+    width: 80%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
