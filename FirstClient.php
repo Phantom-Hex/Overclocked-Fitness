@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="styles/main.css" />
+<!-- <link rel="stylesheet" type="text/css" href="styles/main.css" /> -->
 <?php
 require("inc/database.php");
 require("inc/heading.php");
@@ -175,8 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-if(isset($_POST['Client']))
-{
+if(isset($_POST['Client'])){
 	try
       {
          if($contact->clientRegister($firstname,$lastname,$age,$height,$weight,$email,$gender,$chest,$waist,$hip,$neck,$forearm,$tricep,$bicep,$thigh,$calves)){
@@ -196,61 +195,67 @@ if(isset($_GET['joined']))
              <?php
 		}
 ?>
-
-<div class="Inputs" style="text-align:center">
+<div class="container">
+<h3 class="text-center display-2">Client Questionnaire</h3>
 <p>
-You want to get started on your path to glory? Well, first we got to know a little about yourself!  Fill out this tiny questionaire and someone will contact you about your needs and what-have-you so we can get your rig jumpstarted, see what parts you need, and assess what we're working with.  Don't worry, you don't need to sign anything in blood, it's just a general idea of who you are.  The formalities can be saved for later.
-<br><br>
-(*Denotes a required field)</P>
-    <form class="Client Data" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    <p><h3>Client Questionnaire</h3>
-        <input type="text" name="firstname" placeholder="First Name*" value="<?php echo $firstname;?>">
-  <span class="error"><?php echo $firstnameErr;?></span><br />
-        <input type="text" name="lastname" placeholder="Last Name*" value="<?php echo $lastname;?>">
-  <span class="error"><?php echo $lastnameErr;?></span><br />
-        <input type="email" name="email" placeholder="E-mail Address*" value="<?php echo $email;?>">
-  <span class="error"><?php echo $emailErr;?></span><br />
-  		<input type="email" name="email" placeholder="Confirm E-mail*" value="<?php echo $email;?>">
-  <span class="error"><?php echo $emailErr;?></span><br />
-        <br><br>
-    </p>
-    <p><h3>Basic Information</h3>
-    <Label for="Client">Gender:<br>
-  <input type="radio" name="gender male" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender female" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <span class="error">*<?php echo $genderErr;?></span><br />
-  <br>
-  <input type="text" name="age" placeholder="Age*" value="<?php echo $age;?>">
-  <span class="error"><?php echo $ageErr;?></span><br />
-  <input type="text" name="height" placeholder="Height* (in inches only)" value="<?php echo $height;?>">
-  <span class="error"><?php echo $heightErr;?></span><br />
-  <input type="text" name="weight" placeholder="Weight* (in lbs.)" value="<?php echo $weight;?>">
-  <span class="error"><?php echo $weightErr;?></span><br /><br />
-  
-    </p>
-    <p><h3>Body Measurements</h3>
-    
-    <input type="text" name="chest" placeholder="Chest* (in inches)" value="<?php echo $chest;?>">
-  <span class="error"><?php echo $chestErr;?></span><br />
-  <input type="text" name="waist" placeholder="Waist* (in inches)" value="<?php echo $waist;?>">
-  <span class="error"><?php echo $waistErr;?></span><br />
-  <input type="text" name="hip" placeholder="Hips* (in inches)" value="<?php echo $hip;?>">
-  <span class="error"><?php echo $hipErr;?></span><br />
-  <input type="text" name="neck" placeholder="Neck (in inches)" value="<?php echo $neck;?>">
-  <span class="error"><?php echo $neckErr;?></span><br />
-  <input type="text" name="forearm" placeholder="Forearm (in inches)" value="<?php echo $forearm;?>">
-  <span class="error"><?php echo $forearmErr;?></span><br />
-  <input type="text" name="tricep" placeholder="Tricep (in inches)" value="<?php echo $tricep;?>">
-  <span class="error"><?php echo $tricepErr;?></span><br />
-  <input type="text" name="bicep" placeholder="Bicep (in inches)" value="<?php echo $bicep;?>">
-  <span class="error"><?php echo $bicepErr;?></span><br />
-  <input type="text" name="thigh" placeholder="Thigh (in inches)" value="<?php echo $thigh;?>">
-  <span class="error"><?php echo $thighErr;?></span><br />
-  <input type="text" name="calves" placeholder="Calves (in inches)" value="<?php echo $calves;?>">
-  <span class="error"><?php echo $calvesErr;?></span><br />
- 
-    
-    <button style"text-align: center" type="submit" name="Client">Time to learn too much!</button>
-    </form>
+  You want to get started on your path to glory? Well, first we got to know a little about yourself!  Fill out this tiny questionaire and someone will contact you about your needs and what-have-you so we can get your rig jumpstarted, see what parts you need, and assess what we're working with.  Don't worry, you don't need to sign anything in blood, it's just a general idea of who you are.  The formalities can be saved for later.
+</p>
+<p>(*Denotes a required field)</p>
+  <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <h3 class="text-center">Basic Information</h3>
+    <div class="container">
+      <div class="form-group">
+        <input class="form-control" type="text" name="firstname" placeholder="First Name*" value="<?php echo $firstname;?>">
+          <span class="error"><?php echo $firstnameErr;?></span><br />
+        <input class="form-control" type="text" name="lastname" placeholder="Last Name*" value="<?php echo $lastname;?>">
+          <span class="error"><?php echo $lastnameErr;?></span><br />
+        <input class="form-control" type="email" name="email" placeholder="E-mail Address*" value="<?php echo $email;?>">
+          <span class="error"><?php echo $emailErr;?></span><br />
+        <input class="form-control" type="email" name="email" placeholder="Confirm E-mail*" value="<?php echo $email;?>">
+          <span class="error"><?php echo $emailErr;?></span><br />
+      </div>
+      <div class="form-group">
+        <Label for="Client">Sex*:<br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="radio1" name="gender male" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">
+          <label class="form-check-label" for="radio1">Male</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="radio2" name="gender female" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">
+          <label class="form-check-label" for="radio2">Female</label>
+          <span class="error"><?php echo $genderErr;?></span><br />
+        </div>
+        <br />
+        <input class="form-control" type="text" name="age" placeholder="Age*" value="<?php echo $age;?>">
+          <span class="error"><?php echo $ageErr;?></span><br />
+        <input class="form-control" type="text" name="height" placeholder="Height* (in inches only)" value="<?php echo $height;?>">
+          <span class="error"><?php echo $heightErr;?></span><br />
+        <input class="form-control" type="text" name="weight" placeholder="Weight* (in lbs.)" value="<?php echo $weight;?>">
+          <span class="error"><?php echo $weightErr;?></span><br />
+      </div>
+    </div>
+    <div class="form-group">
+      <h3 class="text-center">Body Measurements</h3>
+      <input class="form-control" type="text" name="chest" placeholder="Chest* (in inches)" value="<?php echo $chest;?>">
+      <span class="error"><?php echo $chestErr;?></span><br />
+      <input class="form-control" type="text" name="waist" placeholder="Waist* (in inches)" value="<?php echo $waist;?>">
+      <span class="error"><?php echo $waistErr;?></span><br />
+      <input class="form-control" type="text" name="hip" placeholder="Hips* (in inches)" value="<?php echo $hip;?>">
+      <span class="error"><?php echo $hipErr;?></span><br />
+      <input class="form-control" type="text" name="neck" placeholder="Neck (in inches)" value="<?php echo $neck;?>">
+      <span class="error"><?php echo $neckErr;?></span><br />
+      <input class="form-control" type="text" name="forearm" placeholder="Forearm (in inches)" value="<?php echo $forearm;?>">
+      <span class="error"><?php echo $forearmErr;?></span><br />
+      <input class="form-control" type="text" name="tricep" placeholder="Tricep (in inches)" value="<?php echo $tricep;?>">
+      <span class="error"><?php echo $tricepErr;?></span><br />
+      <input class="form-control" type="text" name="bicep" placeholder="Bicep (in inches)" value="<?php echo $bicep;?>">
+      <span class="error"><?php echo $bicepErr;?></span><br />
+      <input class="form-control" type="text" name="thigh" placeholder="Thigh (in inches)" value="<?php echo $thigh;?>">
+      <span class="error"><?php echo $thighErr;?></span><br />
+      <input class="form-control" type="text" name="calves" placeholder="Calves (in inches)" value="<?php echo $calves;?>">
+      <span class="error"><?php echo $calvesErr;?></span><br />
+      <button style="text-align: center" type="submit" name="Client" class="btn-primary">Time to learn too much!</button>
+    </div>
+  </form>
 </div>
 <?php require("inc/footing.php") ?>
