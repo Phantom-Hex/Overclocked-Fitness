@@ -4,7 +4,7 @@
 class Database
 {   
     private $host = "localhost";
-    private $db_name = "burnerbase";
+    private $db_name = "Burnerbase";
     private $username = "root";
     private $password = "";
     public $conn;
@@ -20,7 +20,8 @@ class Database
         }
 		catch(PDOException $exception)
 		{
-            echo "ERROR DETECTED: " . $exception->getMessage();
+            echo "ERROR DETECTED: ". $exception->getMessage();
+            echo ". You saw nothing.";
         }
          
         return $this->conn;

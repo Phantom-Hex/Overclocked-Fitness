@@ -196,7 +196,7 @@ if(isset($_GET['joined']))
 		}
 ?>
 <div class="container">
-<h3 class="text-center display-2">Client Questionnaire</h3>
+<h3 class="text-center display-4">Client Questionnaire</h3>
 <p>
   You want to get started on your path to glory? Well, first we got to know a little about yourself!  Fill out this tiny questionaire and someone will contact you about your needs and what-have-you so we can get your rig jumpstarted, see what parts you need, and assess what we're working with.  Don't worry, you don't need to sign anything in blood, it's just a general idea of who you are.  The formalities can be saved for later.
 </p>
@@ -254,7 +254,7 @@ if(isset($_GET['joined']))
       <span class="error"><?php echo $thighErr;?></span><br />
       <input class="form-control" type="text" name="calves" placeholder="Calves (in inches)" value="<?php echo $calves;?>">
       <span class="error"><?php echo $calvesErr;?></span><br />
-      <button style="text-align: center" type="submit" name="Client" class="btn-primary">Time to learn too much!</button>
+      <button type="submit" name="Client" class="btn btn-primary text-center">Time to learn too much!</button>
     </div>
   </form>
 </div>
