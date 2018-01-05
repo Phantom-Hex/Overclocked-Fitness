@@ -6,28 +6,26 @@
 
 /* Main Elements */
 body {
-	background: black;
-	color: white;
 	font-family: "Ubuntu", Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	margin-top: 20px;
 }
 
-h2 {
-	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
-	font-size: 28px;
-}
+.parallax { 
+    /* The image used */
+    background-image: url("./img/Fitness.jpg");
 
-h3 {
-	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
-	font-size: 24px;
-	text-transform: uppercase;
-	text-align:center;
-	text-shadow:#0041A7 #0024FF;
+    /* Set a specific height */
+    height: 200px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Header Elements */
 
-#header ul {
+/* #header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -59,11 +57,11 @@ h3 {
 	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
 	font-size: 20px;
 	margin: -4px;
-}
+} */
 
 /* DIV elements */
 
-.Space1 h2 {
+/* .Space1 h2 {
 	font-family: "Russo One", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
 	font-size: 28px;
 	text-transform: uppercase;
@@ -93,19 +91,9 @@ h3 {
 
 /* Footer Elements */
 
-.sempra {
-	text-align: inherit;
-	text-outline:#F90004;
-}
-
-div p {
-	padding-right: 12%;
-	padding-left: 12%;
-}
-
 /* Form Elements */
 
-input[type=text], input[type=email] {
+/* input[type=text], input[type=email] {
     width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -139,33 +127,4 @@ textarea {
     border: 3px solid #ccc;
     border-radius: 4px;
     resize: none;
-}
-
-/* mobile devices first! */
-
-@media (max-width: 480px){
-	body {
-		text: gray;
-		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-		text-align:center;
-		margin-top: 150px;
-	}
-	
-	#Main {
-		text-wrap:normal;
-	}
-	
-	#header li, 
-    #header.initials {
-		float: none;
-		width: 100%}
-}
-
-/* hit the tablets next */
-
-@media (max-width:720px){
-
-	
-}
-
-/* and the rest is history! */
+} */

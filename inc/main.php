@@ -39,6 +39,7 @@ if(isset($_GET['joined']))
              <?php
 		}
 ?>
+<!-- first page content starts -->
 <style>
 .parallax { 
     /* The image used */
@@ -54,7 +55,6 @@ if(isset($_GET['joined']))
     background-size: cover;
 }
 </style>
-<!-- first page content starts -->
 <section class="text-center bg-dark text-light">
   <div class="container-fluid p-5 text-left">
     <h3>Ready to Level Up?</h3>
@@ -83,7 +83,7 @@ if(isset($_GET['joined']))
     </p>
   </div>
 </section>
-<section id="signup" class="container text-center px-5">
+<section id="signup" class="container text-center px-5 col-6">
   <hr />
   <h2>Sign up for our newsletter!</h2>
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
