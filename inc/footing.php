@@ -1,7 +1,6 @@
 <!-- footer content here! -->
-  <footer class="footer container text-center">
-     <hr />
-  	<h3 class="text-muted">Follow us on social media!</h3>
+  <footer class="footer text-center py-5 bg-primary">
+  	<h2 class="pb-4">Follow us on social media!</h2>
   	<div>
   		<a href="http://facebook.com/OverclockedFitness" alt="Facebook Page"><img class="img-fluid" src="./img/social/facebook.png" width="50px" alt="Facebook"></a>
     	<a href="http://twitter.com/OverclockedFitness" alt="Twitter"><img class="img-fluid" src="./img/social/twitter.png" width="50px" alt="Twitter"></a>

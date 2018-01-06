@@ -60,18 +60,18 @@ if(isset($_GET['joined']))
     <h3>Ready to Level Up?</h3>
     <p>Fitness takes hard work, dedication, knowledge, and passion.  It's not just protein shakes, kale smoothies, weird green concoctions, and roid rage.  Hack your body and become something more than the current version of yourself.</p>
   </div>
-  <div class="parallax">
+  <div class="parallax py-5">
     <p class="display-4">Hack your body.
     <small class="text-muted">Hack yourself.</small></p>
   </div>
-  <div class="container-fluid p-5" style="">
+  <div class="container p-5" style="">
     <h3>Highly efficient!</h3>
     <p>Lots of folks stay in the gym for nearly 2 to 3 hours a day; and they're those big bulky bros looking to compete in a steel-tossing kumite!  At O.F., we believe in explosive plyometric movement, calisthenic exercise, and short-burst HIIT in order to get results in just under half the time.  Maximum effort, the merc says.</p>
     <p>
      Each program is custom-made for any body type and lifestyle.  Whether you have all the time in the world, a 9-to-5 business suit, or a nocturnal vampire, there are plans available for all times of the day and night!  There's 24 hours in a day, you can afford <strong>under an hour!</strong>
    </p>
   </div>
-  <div class="parallax">
+  <div class="parallax py-5">
     <p class="display-4">Overcome your limits.
     <small class="text-muted">Become awesome.</small></p>
   </div>
