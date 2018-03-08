@@ -43,19 +43,18 @@ function test_input($data) {
 }
 ?>
 
-<div class="section1">
-    <p>For all business inquiries and questions, please contact Tony directly by clicking <a href="mailto: TatsumakiFitness@mail.com">here</a> or leave a comment below.
-    </p>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="text/plain">
-    <p>For all other questions, please fill out this form.
-    <br>
-    (* Denotes a required field)</p>
-    <p><label for="newsletter">Name: <br></label><input type="text" id="name" placeholder="Somebody Inquisitive" value="<?php echo $name;?>">
-  <span class="error">* <?php echo $nameErr;?></span></p>
-    <p><label for="newsletter">E-Mail: <br></label><input type="Email" id="Email" placeholder="someone@somemailbox.com" value="<?php echo $email;?>">
-  <span class="error">* <?php echo $emailErr;?></span></p>
-    <p><textarea name="comment" rows="3" cols="40"><?php echo $comment;?>Tell me how you really feel. </textarea></p>
-    <p><button type="button" name="submit" value="Client">Send!</button> 
-    </form>
-</div>
+<main class="container">
+    <h2 class="display-4 pt-4">@ViewData["Title"]</h2>
+    <h3>Contact Us</h3>
+
+    <address>
+        We are located in Louisville, Kentucky.
+    </address>
+    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <address>
+        <strong>Support:</strong> <a href="mailto:Admin@PhantomHex.com">Click here</a> |
+        <strong>Marketing:</strong> <a href="mailto:Admin@PhantomHex.com">Click here</a>
+    </address>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzqB6cnnw2nH2aVSUP_CHNBgYQsasySmY&callback=myMap"></script>
+</main>
 <?php require("inc/footing.php");?>

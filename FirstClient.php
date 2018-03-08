@@ -195,13 +195,11 @@ if(isset($_GET['joined']))
              <?php
 		}
 ?>
-<div class="container text-center">
-  <h3 class="display-4 py-4">Client Questionnaire</h3>
-  <p class="lead">
-    You want to get started on your path to glory? Well, first we got to know a little about yourself!  Fill out this tiny questionaire and someone will contact you about your needs and what-have-you so we can get your rig jumpstarted, see what parts you need, and assess what we're working with.  Don't worry, you don't need to sign anything in blood, it's just a general idea of who you are.  The formalities can be saved for later.
-  <br>(*Denotes a required field)</p>
-    <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    <!-- Form coding -->
+<div class="container text-center py-3">
+  <h2 class="display-4 pt-4">Candidate Application</h2>
+  <p class="lead">Use this form to fill in any and all details you may know about yourself right now. After filling this out, we'll contact you later to talk about your fitness goals.</p>
+  <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <!-- Form coding -->
       <div class="row">
         <div class="col-md-6">
         <h3 class="text-center">Basic Information</h3>
@@ -216,7 +214,7 @@ if(isset($_GET['joined']))
               <span class="error"><?php echo $emailErr;?></span><br />
           </div>
           <div class="form-group">
-            <Label for="Client">Sex*:<br>
+            <Label for="Client">Biological Sex*:<br>
             <div class="form-check">
               <input class="form-check-input" type="radio" id="radio1" name="gender male" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">
               <label class="form-check-label" for="radio1">Male</label>
@@ -260,6 +258,7 @@ if(isset($_GET['joined']))
         </div>
       </div>
       <button type="submit" name="Client" class="btn btn-primary text-center">Time to learn too much!</button>
-    </form>
-  </div>
+  </form>
+</div>
+  
 <?php require("inc/footing.php") ?>

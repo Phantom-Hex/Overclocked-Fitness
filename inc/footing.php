@@ -1,5 +1,5 @@
 <!-- footer content here! -->
-  <footer class="footer text-center py-5 bg-primary">
+  <footer class="footer text-center py-5" style="background: black;">
   	<h2 class="pb-4">Follow us on social media!</h2>
   	<div>
   		<a href="http://facebook.com/OverclockedFitness" alt="Facebook Page"><img class="img-fluid" src="./img/social/facebook.png" width="50px" alt="Facebook"></a>
