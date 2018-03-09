@@ -1,14 +1,14 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="keyword" content="Overclocked Fitness, fitness, workout plans, exercise, personal training">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto|Russo+One" rel="stylesheet">
-<link href="./styles/main.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="../styles/main.css"> -->
+<link href="./assets/styles/main.css" rel="stylesheet">
+<!-- scripts -->
+<script defer src="./assets/js/main.js"></script>
+<script src="./assets/js/modernizr.js"></script>
 <title>Overclocked Fitness</title>
 </head>
 <body class="bg-dark text-light">

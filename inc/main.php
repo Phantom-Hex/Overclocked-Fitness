@@ -72,7 +72,7 @@ if(isset($_GET['joined']))
     </div>
 </section>
 <hr />
-<section id="signup" class="container text-center px-5 col-6 jumbotron bg-secondary">
+<section id="signup" class="container text-center px-5 col-md-6 jumbotron bg-secondary">
   <h2>Sign up for our newsletter!</h2>
       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="form-group small">

@@ -1,18 +1,15 @@
 <?php
-
 /* Database connecting! */
 class Database
-{   
+{
     private $host = "localhost";
     private $db_name = "Burnerbase";
     private $username = "root";
     private $password = "";
     public $conn;
-     
     public function db()
 	{
-     
-	    $this->conn = null;    
+	    $this->conn = null;
         try
 		{
             $this->conn = new PDO("mysql:host=".$this->host .";dbname=". $this->db_name, $this->username, $this->password);
@@ -20,10 +17,10 @@ class Database
         }
 		catch(PDOException $exception)
 		{
-            echo "ERROR DETECTED: ". $exception->getMessage();
-            echo ". You saw nothing.";
+            echo "<dialog open> ERROR DETECTED: ";
+            echo $exception->getMessage();
+            echo ". You saw nothing. </dialog>";
         }
-         
         return $this->conn;
     }
 }

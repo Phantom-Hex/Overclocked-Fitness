@@ -5,7 +5,7 @@
     <div class="row align-items-center">
         <div class="col-md-7"><p class="lead">Overclocked Fitness was originally started as a self-proprietorship by head coach (and lean, mean, fighting machine) Tony Tatsumaki. In bringing the fundamentals of calisthenic workouts into the gym with complex resistance routines, Tony has pioneered an efficient way for beginners and advanced strength training without the need of a gym membership or heavy weight.</p></div>
         <div class="col-md-5">
-            <img class="img-thumbnail rounded" src="./img/runner.jpeg">
+            <img class="img-thumbnail rounded" src="./assets//img/runner.jpeg">
         </div>
     </div>
     <hr class="featurette-divider">
@@ -14,7 +14,7 @@
             <p class="lead">The addition of the tiers came at the behest of his personal circle of friends when they wanted to get into fitness. Computers and all-around geekery were all anyone knew in the group, so then the idea of the Hero Complex came to mind.  Each tier was initially designed around the familiar faces in graphic novels and japanese animation (the fancier terms for comics and anime) such as Goku, Batman, Joe the Condor, Harley Quinn, and Lightning Farron.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img class="img-thumbnail rounded" src="./img/shoes.jpeg">
+            <img class="img-thumbnail rounded" src="./assets/img/shoes.jpeg">
         </div>
     </div>
     <hr class="featurette-divider">
